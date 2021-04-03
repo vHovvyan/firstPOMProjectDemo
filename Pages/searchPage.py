@@ -14,7 +14,7 @@ class SearchPage():
 
     def click_search(self):
         self.driver.find_element_by_name(self.searchButtonName).click()
-        links = self.driver.find_elements_by_tag_name("a")
+        links = self.driver.find_elements_by_xpath('.//div[@class="yuRUbf"]/a')
         print(links)
         with open('test_file.txt', 'a') as f:
             for link in links:
