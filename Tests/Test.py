@@ -20,9 +20,9 @@ class SearchTest(unittest.TestCase):
         driver = self.driver
         driver.get("https://google.ru")
 
-        login = SearchPage(driver)
-        login.enter_seachword("Testing")
-        login.click_search()
+        search = SearchPage(driver)
+        search.enter_seachword("Volo")
+        search.click_search()
 
         driver.close()
         driver.quit()
