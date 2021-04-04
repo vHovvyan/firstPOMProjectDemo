@@ -31,4 +31,4 @@ class SearchTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:/Users/Cronos/Desktop/pythonProject/drivers/report'))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:/Users/Cronos/Desktop/POMProject/report'))
