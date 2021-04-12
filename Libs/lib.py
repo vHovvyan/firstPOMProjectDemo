@@ -8,7 +8,6 @@ class Lib:
                     f.write(str(href) + "\n")
         except (IOError, ValueError, EOFError) as error:
             print(error)
-        except:
             raise Exception("Unexpected error to write in file")
         finally:
             f.close()
