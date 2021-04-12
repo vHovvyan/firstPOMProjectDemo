@@ -8,27 +8,25 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "...", "..."))
 
 
-class SearchTest(unittest.TestCase):
+driver = webdriver.Chrome()
+driver.implicitly_wait(2)
+driver.maximize_window()
 
-    @classmethod
-    def setUpClass(cls):
-        cls.driver = webdriver.Chrome(executable_path='C:/Users/Cronos/Desktop/POMProject/drivers/chromedriver.exe')
-        cls.driver.implicitly_wait(2)
-        cls.driver.maximize_window()
 
-    def testing_search(self):
-        driver = self.driver
-        driver.get("https://google.ru")
+def testing_search():
 
-        search = SearchPage(driver)
-        search.enter_seachword("Volo")
-        search.click_search()
+    driver.get("https://google.ru")
 
-        driver.close()
-        driver.quit()
+    search = SearchPage(driver)
+    search.enter_searchword("Volo")
+    search.click_search()
 
-        print("Test Completed")
+    driver.close()
+    driver.quit()
+
+    print("Test Completed")
 
 
 if __name__ == '__main__':
+    testing_search()
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:/Users/Cronos/Desktop/POMProject/report'))
